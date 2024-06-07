@@ -210,10 +210,10 @@ a:focus {
   }
 }
 
-.ke-lazyload {
+/* .ke-lazyload {
   position: relative;
   overflow: hidden;
-}
+} */
 
 .ke-lazyload__color-preview {
   position: absolute;
@@ -223,9 +223,9 @@ a:focus {
   bottom: 0;
   background: #f8f8f8;
 }
-.ke-lazyload--loaded {
-  padding-top: 71.42%;
-}
+/* .ke-lazyload--loaded {
+  padding-top: 0px;
+} */
 .about-browse__title {
   display: block;
   margin-top: 10px;
@@ -251,25 +251,30 @@ a:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 160px; /* 기존 rem 단위를 px로 변경 */
+  /* max-width: 1000px; 기존 rem 단위를 px로 변경 */
+  padding-top: 15px; /* 기존 rem 단위를 px로 변경 */
 }
 .wrap-narrow {
-  max-width: 988px; /* 기존 rem 단위를 px로 변경 */
+  max-width: 2000px; /* 기존 rem 단위를 px로 변경 */
   margin: 0 auto;
   position: relative;
 }
-.about-message::after {
-  content: '';
-  display: table;
-  clear: both;
+.about-message {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 160px;
 }
+
 .about-message__title {
+  display: flex;
+  justify-content: space-between;
   float: left;
   width: 39%;
   padding-right: 36px; /* 기존 rem 단위를 px로 변경 */
   font-size: 44px; /* 기존 rem 단위를 px로 변경 */
   font-weight: 600;
   line-height: 1.18;
+
 }
 .about-intro__logo {
   width: 258px; /* 기존 rem 단위를 px로 변경 */
@@ -284,13 +289,53 @@ a:focus {
   overflow: hidden;
 }
 .about-message__content {
-  width: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
   color: #666666;
   text-align: left; /* 텍스트를 왼쪽 정렬 */
 }
+.about-message__items{
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
 .about-message__buttons {
   margin-top: 25px; /* 기존 rem 단위를 px로 변경 */
+  text-align: center;
+  display: flexbox;
+  justify-self: start;
+
+
 }
+button{
+  background-color: #191919;
+  border-bottom: #191919;
+  color: #fff;
+  width: 30%;
+  border-radius: 100px;
+  border: none;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+button:hover{
+  background-color: #FFE100;
+  border-bottom: #FFE100;
+  color: #191919;
+}
+/* 
+.button-style {
+  background-color: #191919;
+  border-bottom: #191919;
+  color: #fff;
+  border-radius: 500px;
+  border: none;
+  font-weight: 700;
+} */
+
+
 .ke-btn--case-fill {
   color: #fff;
   background: #191919;
