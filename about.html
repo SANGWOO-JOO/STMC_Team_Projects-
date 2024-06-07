@@ -1,306 +1,414 @@
-<!DOCTYPE html> <!-- HTML5 문서 선언 -->
-<html lang="en"> <!-- 문서의 언어를 영어로 설정 -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- 문서의 문자 인코딩을 UTF-8로 설정 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹을 위한 설정 -->
-    <title>Complete Web Page</title> <!-- 웹 페이지의 제목 설정 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Web Page</title>
     <style>
-        /* 구글 폰트를 불러오는 코드 */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Samsung+Sharp+Sans&display=swap');
 
-        /* 웹페이지의 전체적인 스타일 설정 */
         body {
-            font-family: 'Noto Sans KR', sans-serif; /* 기본 글꼴 설정 */
-            margin: 0; /* 페이지의 기본 여백 제거 */
-            padding: 0; /* 페이지의 기본 패딩 제거 */
-            background-color: #fff; /* 배경색을 흰색으로 설정 */
-            color: #333; /* 글자색을 진한 회색으로 설정 */
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
         }
 
-        /* 섹션들의 공통 스타일 설정 */
         .section-1, .section-2, .section-3 {
-            padding-left: 12%; /* 왼쪽 여백 12% 설정 */
-            padding-right: 12%; /* 오른쪽 여백 12% 설정 */
+            padding-left: 12%;
+            padding-right: 12%;
         }
 
-        /* 첫 번째 섹션의 스타일 설정 */
         .section-1 {
-            display: flex; /* 섹션을 플렉스 박스로 설정 */
-            flex-direction: column; /* 플렉스 방향을 세로로 설정 */
-            align-items: flex-start; /* 항목을 왼쪽에 정렬 */
-            justify-content: center; /* 항목을 세로축 중앙에 정렬 */
-            height: 100vh; /* 섹션 높이를 화면 높이와 동일하게 설정 */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
         }
 
         .section-1 .container {
-            max-width: 800px; /* 최대 너비를 800px로 설정 */
-            padding: 20px; /* 패딩을 20px로 설정 */
+            max-width: 800px;
+            padding: 20px;
         }
 
-        /* 섹션 제목의 스타일 설정 */
         .section-1 h2 {
-            font-size: 1.3em; /* 폰트 크기를 1.3em로 설정 */
-            margin: 0 0 20px 0; /* 아래쪽 여백 20px 설정 */
-            color:  #333; /* 글자색을 진한 회색으로 설정 */
-            font-weight: 400; /* 글자 굵기를 400으로 설정 */
-            padding: 15px; /* 패딩을 15px로 설정 */
+            font-size: 1.3em;
+            margin: 0 0 20px 0;
+            color:  #333;
+            font-weight: 400;
+            padding: 15px;
         }
 
         .section-1 h1 {
-            font-size: 3.75rem; /* 폰트 크기를 3.75rem로 설정 */
-            margin: 10px 0; /* 위아래 여백을 10px로 설정 */
-            line-height: 1.2; /* 줄 간격을 1.2로 설정 */
-            font-weight: 700; /* 글자 굵기를 700으로 설정 */
-            white-space: nowrap; /* 텍스트를 한 줄로 설정 */
+            font-size: 3.75rem;
+            margin: 10px 0;
+            line-height: 1.2;
+            font-weight: 700;
+            white-space: nowrap;
         }
 
         .triple-size {
-            font-size: 7.5rem; /* 폰트 크기를 7.5rem로 설정 */
-            line-height: 1.2; /* 줄 간격을 1.2로 설정 */
+            font-size: 7.5rem;
+            line-height: 1.2;
         }
 
         .section-1 .sub-heading {
-            display: flex; /* 서브 헤딩을 플렉스 박스로 설정 */
-            justify-content: space-between; /* 항목을 양쪽 끝에 정렬 */
-            font-size: 1.38rem; /* 폰트 크기를 1.38rem로 설정 */
-            margin: 20px 0 30px 0; /* 위 여백 20px, 아래 여백 30px 설정 */
-            font-weight: 700; /* 글자 굵기를 700으로 설정 */
-            padding: 10px; /* 패딩을 10px로 설정 */
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.38rem;
+            margin: 20px 0 30px 0;
+            font-weight: 700;
+            padding: 10px;
         }
 
         .section-1 .sub-heading div {
-            color: #333; /* 글자색을 진한 회색으로 설정 */
+            color: #333;
         }
 
         .section-1 .content p {
-            font-size: 1.1rem; /* 폰트 크기를 1.1rem로 설정 */
-            line-height: 1.5; /* 줄 간격을 1.5로 설정 */
-            margin: 5px 0; /* 위아래 여백을 5px로 설정 */
-            color: #333; /* 글자색을 진한 회색으로 설정 */
-            font-weight: 400; /* 글자 굵기를 400으로 설정 */
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin: 5px 0;
+            color: #333;
+            font-weight: 400;
         }
 
-        /* 두 번째 섹션의 스타일 설정 */
         .section-2 {
-            text-align: center; /* 텍스트를 중앙 정렬 */
-            position: relative; /* 상대 위치 설정 */
-            width: 100%; /* 너비를 100%로 설정 */
-            max-width: 1200px; /* 최대 너비를 1200px로 설정 */
-            margin-bottom: 300px; /* 아래쪽 여백을 300px로 설정 */
+            text-align: center;
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 300px;
         }
 
         .section-2 .header {
-            margin-bottom: 40px; /* 아래쪽 여백을 40px로 설정 */
+            margin-bottom: 40px;
         }
 
         .section-2 .header h1 {
-            font-size: 70px; /* 폰트 크기를 70px로 설정 */
-            font-family: 'Samsung Sharp Sans', sans-serif; /* 폰트 설정 */
-            font-weight: bold; /* 글자 굵기를 볼드로 설정 */
-            line-height: 1.2; /* 줄 간격을 1.2로 설정 */
+            font-size: 70px;
+            font-family: 'Samsung Sharp Sans', sans-serif;
+            font-weight: bold;
+            line-height: 1.2;
         }
 
         .section-2 .plus-ai {
-            font-size: 70px; /* 폰트 크기를 70px로 설정 */
-            font-family: 'Samsung Sharp Sans', sans-serif; /* 폰트 설정 */
-            font-weight: bold; /* 글자 굵기를 볼드로 설정 */
-            background-color: black; /* 배경색을 검정색으로 설정 */
-            color: white; /* 글자색을 흰색으로 설정 */
-            padding: 5px 20px; /* 위아래 패딩 5px, 좌우 패딩 20px 설정 */
-            border-radius: 50px; /* 테두리 둥글게 설정 */
-            display: inline-block; /* 인라인 블록으로 설정 */
-            margin-left: 10px; /* 왼쪽 여백 10px 설정 */
+            font-size: 70px;
+            font-family: 'Samsung Sharp Sans', sans-serif;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-left: 10px;
         }
 
-        /* 두 번째 섹션의 원(circle) 스타일 설정 */
         .section-2 .circles {
-            position: absolute; /* 절대 위치 설정 */
-            top: 0; /* 위쪽에서 0 위치 설정 */
-            right: 0; /* 오른쪽에서 0 위치 설정 */
-            width: 50%; /* 너비를 50%로 설정 */
-            height: 100%; /* 높이를 100%로 설정 */
-            z-index: -1; /* z-index를 -1로 설정 (뒤로 보내기) */
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            z-index: -1;
         }
 
         .section-2 .circle {
-            border-radius: 50%; /* 원형으로 설정 */
-            width: 400px; /* 너비를 400px로 설정 */
-            height: 400px; /* 높이를 400px로 설정 */
-            display: inline-block; /* 인라인 블록으로 설정 */
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            display: inline-block;
         }
 
         .section-2 .yellow {
-            background-color: #FFD700; /* 배경색을 노란색으로 설정 */
-            position: absolute; /* 절대 위치 설정 */
-            right: 250px; /* 오른쪽에서 250px 위치 설정 */
-            top: 100px; /* 위쪽에서 100px 위치 설정 */
-            z-index: 1; /* z-index를 1로 설정 (앞으로 보내기) */
+            background-color: #FFD700;
+            position: absolute;
+            right: 250px;
+            top: 100px;
+            z-index: 1;
         }
 
         .section-2 .blue {
-            background-color: #1E90FF; /* 배경색을 파란색으로 설정 */
-            position: absolute; /* 절대 위치 설정 */
-            right: 50px; /* 오른쪽에서 50px 위치 설정 */
-            top: 150px; /* 위쪽에서 150px 위치 설정 */
-            z-index: 0; /* z-index를 0으로 설정 (기본값) */
+            background-color: #1E90FF;
+            position: absolute;
+            right: 50px;
+            top: 150px;
+            z-index: 0;
         }
 
-        /* 두 번째 섹션의 내용(content) 스타일 설정 */
         .section-2 .content {
-            display: flex; /* 내용물을 플렉스 박스로 설정 */
-            justify-content: space-between; /* 항목을 양쪽 끝에 정렬 */
-            margin-top: 50px; /* 위쪽 여백 50px 설정 */
-            padding: 0 50px; /* 좌우 패딩 50px 설정 */
-            width: 100%; /* 너비를 100%로 설정 */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 0 50px;
+            width: 100%;
         }
 
         .section-2 .section {
-            width: 22%; /* 너비를 22%로 설정 */
-            text-align: left; /* 텍스트를 왼쪽 정렬 */
+            width: 22%;
+            text-align: left;
         }
 
         .section-2 .section h2 {
-            font-size: 24px; /* 폰트 크기를 24px로 설정 */
-            font-family: 'Samsung Sharp Sans', sans-serif; /* 폰트 설정 */
-            font-weight: bold; /* 글자 굵기를 볼드로 설정 */
-            margin-bottom: 10px; /* 아래쪽 여백 10px 설정 */
+            font-size: 24px;
+            font-family: 'Samsung Sharp Sans', sans-serif;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
 
         .section-2 .section hr {
-            width: 100%; /* 너비를 100%로 설정 */
-            border: 1px solid #000; /* 1px 두께의 검정색 테두리 설정 */
-            margin-bottom: 10px; /* 아래쪽 여백 10px 설정 */
+            width: 100%;
+            border: 1px solid #000;
+            margin-bottom: 10px;
         }
 
         .section-2 .section p {
-            font-size: 18px; /* 폰트 크기를 18px로 설정 */
-            font-family: 'Samsung Sharp Sans', sans-serif; /* 폰트 설정 */
-            color:  #333; /* 글자색을 진한 회색으로 설정 */
+            font-size: 18px;
+            font-family: 'Samsung Sharp Sans', sans-serif;
+            color:  #333;
         }
 
-        /* 세 번째 섹션의 스타일 설정 */
         .section-3 {
-            display: flex; /* 섹션을 플렉스 박스로 설정 */
-            justify-content: center; /* 항목을 가로축 중앙에 정렬 */
-            align-items: center; /* 항목을 세로축 중앙에 정렬 */
-            height: 115vh; /* 섹션 높이를 화면 높이의 115%로 설정 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 115vh;
         }
 
         .section-3 .content {
-            text-align: center; /* 텍스트를 중앙 정렬 */
-            max-width: 800px; /* 최대 너비를 800px로 설정 */
+            text-align: center;
+            max-width: 800px;
         }
 
         .section-3 .contact-container {
-            display: flex; /* 컨테이너를 플렉스 박스로 설정 */
-            justify-content: space-between; /* 항목을 양쪽 끝에 정렬 */
-            align-items: center; /* 항목을 세로축 중앙에 정렬 */
-            width: 100%; /* 너비를 100%로 설정 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
 
         .section-3 .contact-us {
-            font-size: 3.0rem; /* 폰트 크기를 3.0rem로 설정 */
-            font-weight: 700; /* 글자 굵기를 700으로 설정 */
-            margin-bottom: 20px; /* 아래쪽 여백 20px 설정 */
-            color: #222; /* 글자색을 진한 회색으로 설정 */
+            font-size: 3.0rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #222;
         }
 
         .section-3 .contact-details {
-            font-size: 1.2rem; /* 폰트 크기를 1.2rem로 설정 */
-            color: #000; /* 글자색을 검정색으로 설정 */
-            margin-bottom: 30px; /* 아래쪽 여백 30px 설정 */
-            line-height: 1.5; /* 줄 간격을 1.5로 설정 */
+            font-size: 1.2rem;
+            color: #000;
+            margin-bottom: 30px;
+            line-height: 1.5;
         }
 
         .section-3 .kakao-map-button {
-            font-size: 1.0rem; /* 폰트 크기를 1.75rem로 설정 */
-            display: inline-block; /* 인라인 블록으로 설정 */
-            border: 1.5px solid #222; /* 1.5px 두께의 진한 회색 테두리 설정 */
-            background-color: #fff; /* 배경색을 흰색으로 설정 */
-            color: #222; /* 글자색을 진한 회색으로 설정 */
-            padding: 10px 20px; /* 위아래 패딩 10px, 좌우 패딩 20px 설정 */
-            cursor: pointer; /* 마우스를 올렸을 때 포인터로 변경 */
-            border-radius: 25px; /* 테두리를 둥글게 설정 */
-            transition: background-color 0.3s, color 0.3s; /* 배경색과 글자색의 변화 시간을 0.3초로 설정 */
-            text-decoration: none; /* 텍스트 장식을 없앰 */
+            font-size: 1.0rem;
+            display: inline-block;
+            border: 1.5px solid #222;
+            background-color: #fff;
+            color: #222;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+            text-decoration: none;
         }
 
         .section-3 .kakao-map-button:hover {
-            background-color: #000; /* 배경색을 검정색으로 설정 */
-            color: #fff; /* 글자색을 흰색으로 설정 */
+            background-color: #000;
+            color: #fff;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 10px;
+            background-color: #fff;
+            border-top: 1px solid #e0e0e0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: calc(100% + 10px);
+            max-width: 1200px;
+            margin: 0 -5px;
+        }
+        .footer .left-section, .footer .right-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        .footer .social-icons a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background-color: #666;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer .social-icons a i {
+            font-size: 16px;
+        }
+        .footer .links {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .footer .links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            position: relative;
+        }
+        .footer .links a.bold {
+            font-weight: bold;
+            color: black;
+        }
+        .footer .links a.no-arrow::after {
+            content: '';
+        }
+        .footer .links a.arrow::after {
+            font-family: "Font Awesome 5 Free"; 
+            content: "\f0d7";
+            font-weight: 900;
+            font-size: 10px;
+            position: absolute;
+            right: -12px;
+            top: 2px;
+            color: #666;
+        }
+        .footer .links a.input-style {
+            padding: 5px 10px;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            position: relative;
+            min-width: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer .links a.input-style::after {
+            content: '+';
+            position: relative;
+            right: 20px;
+            color: #666;
+            font-size: 16px;
+        }
+        .footer .links a:hover {
+            text-decoration: underline;
+        }
+        .footer .copyright {
+            font-size: 16px;
+            color: #0a0101;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- 첫 번째 섹션 -->
     <div class="section-1">
         <div class="container">
-            <h2>The way we work</h2> <!-- 소제목 -->
-            <h1 class="triple-size">Why not? If Kakao Enterprise, (________)</h1> <!-- 큰 제목 -->
-
+            <h2>The way we work</h2>
+            <h1 class="triple-size">Why not? If Kakao Enterprise, (________)</h1>
             <div class="sub-heading">
-                <div>당연한 것들에 대한 도전</div> <!-- 왼쪽 서브헤딩 -->
-                <div>카카오스러운 생각에 대한 기대</div> <!-- 오른쪽 서브헤딩 -->
+                <div>당연한 것들에 대한 도전</div>
+                <div>카카오스러운 생각에 대한 기대</div>
             </div>
             <div class="content">
-                <p>인공지능과 데이터, 클라우드, 검색 기술로 우리의 비즈니스와</p> <!-- 첫 번째 문장 -->
-                <p>일상에 유례없는 변화를 이끌어내는 것.</p> <!-- 두 번째 문장 -->
-                <p>그리고 이 변화를 더 많은 사람들이, 쉽게 누릴 수 있는 세상을 만드는 것.</p> <!-- 세 번째 문장 -->
-                <p>그것이 바로 우리가 기술을 다루는 방식이자 철학입니다.</p> <!-- 네 번째 문장 -->
+                <p>인공지능과 데이터, 클라우드, 검색 기술로 우리의 비즈니스와</p>
+                <p>일상에 유례없는 변화를 이끌어내는 것.</p>
+                <p>그리고 이 변화를 더 많은 사람들이, 쉽게 누릴 수 있는 세상을 만드는 것.</p>
+                <p>그것이 바로 우리가 기술을 다루는 방식이자 철학입니다.</p>
             </div>
         </div>
     </div>
-    <!-- 두 번째 섹션 -->
     <div class="section-2">
         <div class="container">
             <div class="header">
-                <h1>Connect. Solve. <br>Create. <span class="plus-ai">+ AI</span></h1> <!-- 큰 제목과 AI 강조 -->
+                <h1>Connect. Solve. <br>Create. <span class="plus-ai">+ AI</span></h1>
             </div>
             <div class="circles">
-                <div class="circle yellow"></div> <!-- 노란색 원 -->
-                <div class="circle blue"></div> <!-- 파란색 원 -->
+                <div class="circle yellow"></div>
+                <div class="circle blue"></div>
             </div>
             <div class="content">
                 <div class="section">
-                    <h2>Connect</h2> <!-- 소제목 -->
-                    <hr> <!-- 구분선 -->
-                    <p>우리 생활을 이어주는</p> <!-- 첫 번째 문장 -->
-                    <p>모든 것을 연결하여</p> <!-- 두 번째 문장 -->
+                    <h2>Connect</h2>
+                    <hr>
+                    <p>우리 생활을 이어주는</p>
+                    <p>모든 것을 연결하여</p>
                 </div>
                 <div class="section">
-                    <h2>Solve</h2> <!-- 소제목 -->
-                    <hr> <!-- 구분선 -->
-                    <p>불편함은 줄이고</p> <!-- 첫 번째 문장 -->
-                    <p>더 가치 있는 것에 집중해</p> <!-- 두 번째 문장 -->
+                    <h2>Solve</h2>
+                    <hr>
+                    <p>불편함은 줄이고</p>
+                    <p>더 가치 있는 것에 집중해</p>
                 </div>
                 <div class="section">
-                    <h2>Create</h2> <!-- 소제목 -->
-                    <hr> <!-- 구분선 -->
-                    <p>새로운 삶의</p> <!-- 첫 번째 문장 -->
-                    <p>방식을 창조합니다.</p> <!-- 두 번째 문장 -->
+                    <h2>Create</h2>
+                    <hr>
+                    <p>새로운 삶의</p>
+                    <p>방식을 창조합니다.</p>
                 </div>
                 <div class="section ai-section">
-                    <h2>+AI</h2> <!-- 소제목 -->
-                    <hr> <!-- 구분선 -->
-                    <p>이 모든 것을 AI와 </p> <!-- 첫 번째 문장 -->
-                    <p>함께 하겠습니다.</p> <!-- 두 번째 문장 -->
+                    <h2>+AI</h2>
+                    <hr>
+                    <p>이 모든 것을 AI와 </p>
+                    <p>함께 하겠습니다.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 세 번째 섹션 -->
     <div class="section-3">
         <div class="content">
-            <div class="contact-container"></div> <!-- 빈 컨테이너 -->
-            <div class="contact-us">Contact Us</div> <!-- "Contact Us" 텍스트 -->
+            <div class="contact-container"></div>
+            <div class="contact-us">Contact Us</div>
             <div class="contact-details">
-                경기도 성남시 분당구 판교역로 235 에이치스퀘어 N동, (주)카카오엔터프라이즈 <br> <!-- 주소 -->
-                cx@kakaoenterprise.com <!-- 이메일 -->
+                경기도 성남시 분당구 판교역로 235 에이치스퀘어 N동, (주)카카오엔터프라이즈 <br>
+                cx@kakaoenterprise.com
             </div>
-            <button class="kakao-map-button">카카오맵으로 보기</button> <!-- 카카오맵으로 보기 버튼 -->
+            <button class="kakao-map-button">카카오맵으로 보기</button>
             <div style="display: flex; justify-content: center;">
-                <img src="이미지4.png" alt="Map Image" style="width: 250%; height: auto; margin-top: 20px;"> <!-- 이미지 -->
+                <img src="이미지4.png" alt="Map Image" style="width: 250%; height: auto; margin-top: 20px;">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="left-section">
+                <div class="copyright">
+                    © Kakao Enterprise Corp.
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-blogger-b"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="links">
+                    <a href="#" class="arrow">회사소개</a>
+                    <a href="#" class="bold no-arrow">개인정보처리방침</a>
+                    <a href="#" class="no-arrow">사이버윤리실</a>
+                    <a href="#" class="arrow">공지사항</a>
+                    <a href="#" class="no-arrow">고객지원</a>
+                    <a href="#" class="input-style no-arrow">관련사이트</a>
+                </div>
             </div>
         </div>
     </div>
