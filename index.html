@@ -1,12 +1,376 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>개발자|카카오엔터프라이즈</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <p>master test</p>
-    <p>Hi I am Sangwoo</p>
+    <!--navigator-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar">   
+      <div class="container-fluid justify-content-between">
+          <ul class="navbar-nav">
+          <a class="navbar-brand" href="#">
+              <div class="nav-title-a">kakao</div>
+              <div class="nav-title-b">enterprise</div>
+          </a>             
+          </ul>
+          <ul class="navbar-nav">
+      <div class="collapse navbar-collapse d-block d-flex" id="navbarNav">
+              <li class="nav-item dropdown">
+                  <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                  >
+                      서비스
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://kakaocloud.com/">카카오클라우드</a></li>
+                      <li><a class="dropdown-item" href="https://centerflow.kakaocloud.com/">센터플로우</a></li>
+                      <li><a class="dropdown-item" href="https://kakaoilaas.com/">카카오i라스</a></li>
+                  </ul>
+              </li>
+
+              <li class="nav-item QWE">
+                  <a class="nav-link" href="#">개발자</a>
+              </li>
+  
+
+              <li class="nav-item dropdown">
+                  <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                  >
+                      회사정보
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">회사소개</a></li>
+                      <li><a class="dropdown-item" href="https://kakaoenterprise.com/info/news/">뉴스</a></li>
+                      <li><a class="dropdown-item" href="https://splendorous-mousse-8e7d27.netlify.app/">상생 프로그램</a></li>
+                      <li><a class="dropdown-item" href="https://kakaoenterprise.com/info/certification/"></a></li>
+                  </ul>
+              </li>
+          </ul>
+      </ul>
+          <ul class="navbar-nav ">
+              <li class="nav-item nav-inje">
+                  <a class="nav-link inje" href="https://careers.kakaoenterprise.com/"
+                  >인재영입
+                      <div class="circle">
+                          <i
+                          class="fa-solid fa-arrow-right fa-rotate-by"
+                          style="--fa-rotate-angle: 320deg"
+                          ></i>
+                      </div>
+                  </a>
+              </li>
+          </ul>
+          
+      </div>
+
+      </div>
+  </nav>
+    <!--navigator end-->
+    <main id="main">
+      <!--Carousel-->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            data-bs-target="#demo"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button data-bs-target="#demo" data-bs-slide-to="2"></button>
+          <button data-bs-target="#demo" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="https://kakaoenterprise.com/wp-content/uploads/2024/02/카클레터-메인_조금-작게.png"
+              alt="First slide"
+            />
+            <div class="carousel-caption">
+              <h2 class="carousel-caption-title1" >2024년과 함께<br>카클 뉴스레터가 시작합니다.</h2>
+              <button class="balckButton" >무료 구독신청</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              style="opacity:0.7"
+              src="https://kakaoenterprise.com/wp-content/uploads/2023/12/이미지_카카오엔터프라이즈-한국형사법무정책연구원-1699x954.png"
+              alt="First slide"
+            />
+            <div class="carousel-caption">
+              <h2 class="carousel-caption-title2" >한국형사•법무정책연구원<br>'클라우드 네이티브' 전환 완료</h2>
+              <button class="silverButton" >보도자료 보기</button>
+              <button class="balckButton" >서비스 바로가기</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="https://kakaoenterprise.com/wp-content/uploads/2023/06/AMD_수정.png"
+              alt="First slide"
+            />
+            <div class="carousel-caption">
+              <h2 class="carousel-caption-title3">카카오클라우드,<br>AMD 협업 확대로 클라우드 고도화</h2>
+              <button class="whiteButton" >보도자료 바로가기</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="https://kakaoenterprise.com/wp-content/uploads/2024/03/센터플로우-오픈.png"
+              alt="First slide"
+            />
+            <div class="carousel-caption">
+              <h2 class="carousel-caption-title4">[서비스명 변경 안내]<br>센터플로우로 새롭게 시작합니다.</h2>
+              <button class="whiteButton" >보도자료 바로가기</button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          data-bs-target="#demo"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          data-bs-target="#demo"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    <!--Carousal end-->
+
+
+    <div class="container mc">
+        <div class="news-A">
+            <img class="first-news-img" src="./image/first-news-img.png">
+            <div class="news-item">
+                <div class="bodo">보도자료</div>
+                <div class="news-title">카카오클라우드, 글로벌 슈퍼컴퓨터 TOP500 첫 진출 – 44위와<br>70위에 오르다!</div>
+                <img class="news-img" src="	https://kakaoenterprise.com/wp-content/uploads/2024/05/kakaocloud-TOP500-562x338.jpg">
+                <div class="gray-boxs">
+                    <div class="gray-item">#ISC</div>
+                    <div class="gray-item">#top500</div>
+                    <div class="gray-item">#슈퍼컴퓨터</div>
+                    <div class="gray-item">#카카오클라우드</div>
+                </div>
+
+            </div>
+            <div class="news-item">
+                <div class="bodo">보도자료</div>
+                <div class="news-title">카카오엔터프라이즈, ‘클라우드 네이티브 환경에서 로드 밸런서를<br>관리하는 시스템 및 방법’ 특허 등록</div>
+                <img class="news-img" src="https://kakaoenterprise.com/wp-content/uploads/2023/04/thumb-default.jpg">
+                <div class="gray-boxs">
+                    <div class="gray-item">#IEEE Access</div>
+                    <div class="gray-item">#논문</div>
+                    <div class="gray-item">#연구성과</div>
+                    <div class="gray-item">#카카오클라우드</div>
+                    <div class="gray-item">#특허</div>
+                </div>
+                
+            </div>
+            <div class="news-item">
+                <div class="bodo">보도자료</div>
+                <div class="news-title">이경진 카카오엔터프라이즈 대표, ‘일회용품 제로 챌린지’ 동참</div>
+                <img class="news-img" src="	https://kakaoenterprise.com/wp-content/uploads/2024/04/kakaoenterprise_zero_challenge-562x253.jpg">
+                <div class="gray-boxs">
+                    <div class="gray-item">#1회용품제로챌린지</div>
+                    <div class="gray-item">#카카오엔터프라이즈</div>
+                    <div class="gray-item">#카카오클라우드</div>
+                    <div class="gray-item">#환경부</div>
+                </div>
+                
+            </div>
+            <div class="news-item">
+                <div class="bodo">보도자료</div>
+                <div class="news-title">카카오엔터프라이즈, ‘SaaS 개발 지원 사업’ 참여…SaaS 생태계<br>전폭 지원</div>
+                <img class="news-img" src="	https://kakaoenterprise.com/wp-content/uploads/2024/03/KakaoCloud_BI-2-562x316.jpg">
+                <div class="gray-boxs">
+                    <div class="gray-item">#NIA</div>
+                    <div class="gray-item">#NIPA</div>
+                    <div class="gray-item">#SaaS</div>
+                    <div class="gray-item">#유망SaaS개발</div>
+                    <div class="gray-item">#카카오엔터프라이즈</div>
+                    <br>
+                    <div class="gray-item" style="margin-top: 6px;">#카카오클라우드</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="news-B">
+            <div class="news-item">
+                <div class="bodo bodo-BB">보도자료</div>
+                <div class="news-title">카카오엔터프라이즈, 안산시와 디지털 전환 생태계 조성을 위한 업무<br>협약 체결</div>
+                <img class="news-img" src="	https://kakaoenterprise.com/wp-content/uploads/2024/05/kakaoenterprise-Ansan1-562x290.jpg">
+                <div class="gray-boxs">
+                    <div class="gray-item">#MOU</div>
+                    <div class="gray-item">#데이터</div>
+                    <div class="gray-item">#디지털전환</div>
+                    <div class="gray-item">#안산</div>
+                    <div class="gray-item">#카카오클라우드</div>
+                </div>
+                
+            </div>
+            <div class="news-item">
+                <div class="bodo">보도자료</div>
+                <div class="news-title">카카오엔터프라이즈, 몽골과학기술대학교와 몽골 클라우드 생태계<br>조성을 위한 MOU 체결</div>
+                <img class="news-img" src="	https://kakaoenterprise.com/wp-content/uploads/2024/05/kakaoenterprise-MUST1-562x312.jpg">
+                
+            </div>
+            <div class="news-item">
+                <div class="bodo">보도자료</div>
+                <div class="news-title">카카오엔터프라이즈, 국민 생활용품점 ‘다이소’에 AICC 센터플로우<br>구축 완료</div>
+                <img class="news-img" src="	https://kakaoenterprise.com/wp-content/uploads/2024/04/centerflow_daiso-1-562x316.jpg">
+                <div class="gray-boxs">
+                    <div class="gray-item">#Daiso</div>
+                    <div class="gray-item">#SaaS</div>
+                    <div class="gray-item">#센터플로우</div>
+                    <div class="gray-item">#카카오i커넥트센터</div>
+                    <div class="gray-item">#카카오클라우드</div>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="bodo">보도자료</div>
+                <div class="news-title">AI 컨택센터 플랫폼 ‘센터플로우’로 서비스명 변경</div>
+                <img class="news-img" src="	https://kakaoenterprise.com/wp-content/uploads/2024/03/img_centerflow_logo-562x316.jpg">
+                <div class="gray-boxs">
+                    <div class="gray-item">#SaaS   </div>
+                    <div class="gray-item">#센터플로우</div>
+                    <div class="gray-item">#카카오i커넥트센터</div>
+                    <div class="gray-item">#카카오클라우드</div>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="bodo">보도자료</div>
+                <div class="news-title">카카오게임즈 ‘아키에이지 워’를 게임 특화 고성능 카카오클라우드로<br>전환</div>
+                <img class="news-img" src="	https://kakaoenterprise.com/wp-content/uploads/2024/03/kakaocloud_archeagewar-562x316.jpg">
+                <div class="gray-boxs">
+                    <div class="gray-item">#아키에이지워</div>
+                    <div class="gray-item">#엑스엘게임즈</div>
+                    <div class="gray-item">#카카오게임즈</div>
+                    <div class="gray-item">#카카오클라우드</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="plus-item">
+        <div class="plus-text">더 불러오기</div>
+        <div class="plus-button">+</div>
+    </div>
+
+    <div >
+
+        <div class="container">
+            <img src="https://kakaoenterprise.com/wp-content/uploads/2022/07/3_메인-페이지_고객사례-배너.png" alt="" class="img-modificaion">
+            <h3 class="img-div-explain">카카오엔터프라이즈의
+            <br>  다양한 영상 자료들도 확인해보세요</h3>
+            <button type="button" class="btn btn-outline-warning button-style">공식채널 보기</button>
+        </div>
+
+
+    </div>
+
+
+    <div class="container mt-5 mb-5">
+        <div class="firsi-div mb-3">혁신적인 비즈니스</div>
+       
+        <div class="row pt-3 row-div">
+            <div class="col-lg-4 mt-4 experiance">
+                <h5 class="card-title">회사소개</h5>
+                <p class="card-text">카카오엔터프라이즈는 비즈니스와
+                    <br> 일상에 기술을 더하여 디지털 혁신을 
+                    <br> 만들어갑니다.</p>
+                    <div class="last-text">회사소개 바로가기 <div class="circle" >
+                        <i
+                          class="fa-solid fa-arrow-right fa-rotate-by"
+                          style="--fa-rotate-angle: 320deg"
+                        ></i>
+                      </div></div>
+                    
+            </div>
+            <div class="col-lg-4 mt-4">
+                <h5 class="card-title">개발자</h5>
+                <p class="card-text">카카오엔터프라이즈는 개발자들과 
+                    <br> 함께 성장하는 기술 기업입니다.</p>
+                    <div class="last-text">개발자 바로가기 <div class="circle">
+                        <i
+                          class="fa-solid fa-arrow-right fa-rotate-by"
+                          style="--fa-rotate-angle: 320deg"
+                        ></i>
+                      </div></div>
+            </div>
+            <div class="col-lg-4 mt-4">
+                <h5 class="card-title">인재영입</h5>
+                <p class="card-text">국내 최고의 개발자, 기획자, 디자이너
+                    <br> 그리고 비즈니스 전문가가 모여 
+                    <br> 새로운 길을 만들어갑니다.</p>
+                    <div class="last-text">인재영입 바로가기 <div class="circle">
+                        <i
+                          class="fa-solid fa-arrow-right fa-rotate-by"
+                          style="--fa-rotate-angle: 320deg"
+                        ></i>
+                      </div></div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <div class="footer">
+      <div class="footer-content">
+          <div class="left-section">
+              <div class="copyright">
+                  © Kakao Enterprise Corp.
+              </div>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-blogger-b"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-telegram"></i></a>
+              </div>
+          </div>
+          <div class="right-section">
+              <div class="links">
+                  <a href="#" class="arrow">회사소개</a>
+                  <a href="#" class="bold no-arrow">개인정보처리방침</a>
+                  <a href="#" class="no-arrow">사이버윤리실</a>
+                  <a href="#" class="arrow">공지사항</a>
+                  <a href="#" class="no-arrow">고객지원</a>
+                  <a href="#" class="input-style no-arrow">관련사이트</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/895ceaea3b.js" crossorigin="anonymous"></script>
   </body>
 </html>
