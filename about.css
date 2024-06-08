@@ -382,47 +382,44 @@ body {
 }
 
 .section-1, .section-2, .section-3 {
-    padding-left: 12%;
-    padding-right: 12%;
+  padding-left: 12%;
+  padding-right: 12%;
 }
 
 .section-1 {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-    margin-top: 180px;
-    margin-left: 200px;
-    justify-content: center; 
-    /* height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* height: 100vh; */
+  margin-top: 160px;
 }
 
 .section-1 .container {
-    max-width: 800px;
-    /* padding: 20px; */
-    margin-top: 180px;
-    
+  max-width: 800px;
+  padding: 20px;
 }
 
 .section-1 h2 {
-    font-size: 1.3em;
-    margin: 0 0 20px 0;
-    color:  #333;
-    font-weight: 400;
-    padding: 15px;
-    text-align: left;
+  font-size: 1.3em;
+  margin: 0 0 20px 0;
+  color:  #333;
+  font-weight: 400;
+  padding: 15px;
+  text-align: left;
 }
 
 .section-1 h1 {
-    font-size: 3.75rem;
-    margin: 10px 0;
-    line-height: 1.2;
-    font-weight: 700;
-    white-space: nowrap;
+  font-size: 3.75rem;
+  margin: 10px 0;
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .triple-size {
-    font-size: 7.5rem;
-    line-height: 1.2;
+  font-size: 7.5rem;
+  line-height: 1.2;
 }
 
 .section-1 .sub-heading {
@@ -435,28 +432,36 @@ body {
 }
 
 .section-1 .sub-heading div {
-    color: #333;
+  color: #333;
 }
 
 .section-1 .content p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin: 5px 0;
-    color: #333;
-    font-weight: 400;
-    text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 5px 0;
+  color: #333;
+  font-weight: 400;
+  text-align: left;
 }
 
 .section-2 {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 300px;
+    /* text-align: center; */
+    /* position: relative; */
+    /* width: 100%; */
+    margin-top: 180px;
+  
 }
 
 .section-2 .header {
     margin-bottom: 40px;
+
+
+}
+
+.section-2 .container {
+  max-width: 2000px; /* 기존 rem 단위를 px로 변경 */
+  margin: 0 auto;
+  position: relative;
 }
 
 .section-2 .header h1 {
@@ -464,6 +469,8 @@ body {
     font-family: 'Samsung Sharp Sans', sans-serif;
     font-weight: bold;
     line-height: 1.2;
+    padding-left: 0px;   
+    
 }
 
 .section-2 .plus-ai {
@@ -480,10 +487,6 @@ body {
 
 .section-2 .circles {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
     z-index: -1;
 }
 
@@ -497,7 +500,7 @@ body {
 .section-2 .yellow {
     background-color: #FFD700;
     position: absolute;
-    right: 250px;
+    right: 200px; /* 오른쪽으로 50px 이동 */
     top: 100px;
     z-index: 1;
 }
@@ -505,7 +508,7 @@ body {
 .section-2 .blue {
     background-color: #1E90FF;
     position: absolute;
-    right: 50px;
+    right: 0; /* 오른쪽으로 50px 이동 */
     top: 150px;
     z-index: 0;
 }
@@ -515,7 +518,7 @@ body {
     justify-content: space-between;
     margin-top: 50px;
     padding: 0 50px;
-    width: 100%;
+    width: 1500px;
 }
 
 .section-2 .section {
@@ -528,6 +531,7 @@ body {
     font-family: 'Samsung Sharp Sans', sans-serif;
     font-weight: bold;
     margin-bottom: 10px;
+
 }
 
 .section-2 .section hr {
@@ -546,7 +550,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 115vh;
+    /* height: 115vh; */
+    margin-top: 160px;
 }
 
 .section-3 .content {
