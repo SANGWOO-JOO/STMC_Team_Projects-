@@ -1,105 +1,1062 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Web Page</title>
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회사소개 | 카카오엔터프라이즈</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .main-container {
+        padding-top: 155px;
+      }
+      main {
+        display: block;
+        text-align: center;
+      }
+
+      @media (max-width: 860px) {
+        body {
+          font-family: sans-serif;
+        }
+      }
+
+      body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        font-family: 'KakaoBig','Noto Sans KR', sans-serif;
+        font-size: 16px;
+        word-break: keep-all;
+        color: #191919;
+
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        /* color: #333; */
+      }
+
+      input:focus,
+      a:focus {
+        -webkit-tap-highlight-color: rgba(50, 65, 140, 0.08);
+      }
+      @media (max-width: 1480px) {
+        .article {
+          padding-bottom: 160px;
+        }
+      }
+      @media (max-width: 1023px) {
+        .article {
+          padding-bottom: 150px;
+        }
+      }
+      @media (max-width: 860px) {
+        .article {
+          padding-bottom: 130px;
+        }
+      }
+      .article {
+        padding-bottom: 200px;
+      }
+      @media (max-width: 860px) {
+        .article-header {
+          margin-bottom: 20px;
+        }
+      }
+      @media (max-width: 1023px) {
+        .article-header {
+          margin-bottom: 25px;
+        }
+      }
+      @media (max-width: 1480px) {
+        .article-header {
+          margin-bottom: 30px;
+        }
+      }
+      .article-header {
+        margin-bottom: 35px;
+        text-align: center;
+      }
+
+      @media (max-width: 860px) {
+        .about-visual {
+          padding-top: 10px;
+        }
+      }
+      @media (max-width: 1023px) {
+        .about-visual {
+          padding-top: 15px;
+        }
+      }
+      @media (max-width: 1480px) {
+        .about-visual {
+          padding-top: 20px;
+        }
+      }
+      .about-visual {
+        padding-top: 180px;
+      }
+
+      @media (max-width: 860px) {
+        .wrap-middle {
+          margin: 0 20px;
+        }
+      }
+      @media (max-width: 1023px) {
+        .wrap-middle {
+          margin: 0 30px;
+        }
+      }
+      @media (max-width: 1480px) {
+        .wrap-middle {
+          margin: 0 40px;
+        }
+      }
+      @media (max-width: 1680px) {
+        .wrap-middle {
+          max-width: inherit;
+          margin: 0 60px;
+        }
+      }
+      .wrap-middle {
+        max-width: 1500px;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 100px;
+      }
+
+      @media (max-width: 860px) {
+        .article-intro {
+          font-size: 32px;
+          letter-spacing: -0.025em;
+          font-weight: bold;
+        }
+      }
+      @media (max-width: 1023px) {
+        .article-intro {
+          font-size: 20px;
+        }
+      }
+      @media (max-width: 1480px) {
+        .article-intro {
+          margin-top: 10px;
+          font-size: 40px; /* Reduced by 20% from 50px */
+        }
+      }
+      .article-intro {
+        margin-top: 50px;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 1.31;
+      }
+      @media (max-width: 860px) {
+        .article-addition {
+          letter-spacing: -0.025em;
+        }
+      }
+      @media (max-width: 1023px) {
+        .article-addition {
+          margin-top: 15px;
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 1480px) {
+        .article-addition {
+          margin-top: 20px;
+        }
+      }
+      .article-addition {
+        margin-top: 25px;
+        font-size: 20px; /* Reduced by 20% from 25px */
+        font-weight: 400;
+        line-height: 1.66;
+        color: #666;
+      }
+
+      .carousel-container {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        padding: 20px 0; /* Add padding to match the example */
+        margin-bottom: 30px;
+      }
+
+      .carousel {
+        display: flex;
+        width: 100%;
+        gap: 20px; /* 이미지 간 간격 */
+        animation: scroll 40s linear infinite;
+      }
+
+      .carousel__item {
+        min-width: 300px;
+        flex-shrink: 0;
+      }
+
+      .about-browse__thumb {
+        position: relative;
+        border-radius: 20px; /* 부모 요소에 라운딩 적용 */
+        overflow: hidden; /* 자식 요소가 경계를 넘지 않도록 설정 */
+      }
+
+      .about-browse__thumb img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* 이미지 비율 유지 */
+        border-radius: 20px; /* 이미지에 라운딩 적용 */
+      }
+
+      @media (max-width: 860px) {
+        .about-browse__thumb,
+        .about-browse__thumb img {
+          border-radius: 12px;
+        }
+      }
+
+      /* .ke-lazyload {
+        position: relative;
+        overflow: hidden;
+      } */
+
+/* Double the spacing between navbar items */
+.navbar-nav .nav-item {
+margin-right: 3.5rem; /* Increase this value for more spacing */
+}
+
+/* Remove the dropdown indicators (caret) next to '서비스' and '회사정보' */
+.navbar-nav .dropdown-toggle::after {
+display: none;
+}
+
+/
+.nav-item.dropdown:hover > .nav-link::after {
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+
+/* Add underline animation on hover and click */
+.navbar-nav .nav-link {
+position: relative;
+}
+
+.navbar-nav .nav-link::after {
+content: '';
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #000; /* Color of the underline */
+transform-origin: bottom right;
+transition: transform 0.25s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after,
+.navbar-nav .nav-link:active::after,
+.nav-item.dropdown:hover > .nav-link::after,
+.nav-item.dropdown:focus > .nav-link::after,
+.nav-item.dropdown:active > .nav-link::after {
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+      .ke-lazyload__color-preview {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #f8f8f8;
+      }
+      /* .ke-lazyload--loaded {
+        padding-top: 0px;
+      } */
+      .about-browse__title {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        font
+
+
+        -weight: 600;
+line-height: 1.35;
+white-space: normal;
+color: #aaa;
+padding-left: 20px;
+text-align: left;
+}
+
+@keyframes scroll {
+0% {
+  transform: translateX(100%);
+}
+100% {
+  transform: translateX(-100%);
+}
+}
+
+/** about-intro **/
+.about-intro {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 15px;
+}
+.wrap-narrow {
+max-width: 2000px;
+margin: 0 auto;
+position: relative;
+}
+.about-message {
+display: flex;
+justify-content: space-between;
+margin-top: 160px;
+}
+
+.about-message__items p {
+margin-bottom: 40px; /* Increase this value to widen the space */
+font-size: 15px;
+
+  }
+
+
+
+
+.about-message__title {
+display: flex;
+justify-content: space-between;
+float: left;
+width: 39%;
+padding-right: 36px;
+font-size: 44px;
+font-weight: 600;
+line-height: 1.18;
+}
+.about-intro__logo {
+width: 258px;
+margin-top: 2px;
+}
+.about-intro__logo .ke-lazyload {
+padding-top: 13.95%;
+}
+
+.ke-lazyload {
+position: relative;
+overflow: hidden;
+}
+.about-message__content {
+width: 60%;
+display: flex;
+justify-content: space-between;
+color: #666666;
+text-align: left;
+}
+.about-message__items {
+display: flex;
+flex-direction: column;
+padding:  25px;
+}
+
+.about-message__buttons {
+margin-top: 25px;
+text-align: center;
+display: flexbox;
+justify-self: start;
+}
+
+button {
+background-color: #191919;
+border-bottom: #191919;
+color: #fff;
+width: 30%;
+border-radius: 100px;
+border: none;
+font-weight: 600;
+padding: 10px 30px;
+}
+
+button:hover {
+background-color: #FFE100;
+border-bottom: #FFE100;
+color: #191919;
+}
+
+.ke-btn--case-fill {
+color: #fff;
+background: #191919;
+border-color: #191919;
+}
+.ke-btn__basic {
+min-width: 160px;
+padding: 15px 28px 15px;
+font-size: 14px;
+border-width: 2px;
+border-radius: 24px;
+}
+
+.manifesto {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding-left: 50px; 
+}
+.manifesto .about-message__title {
+flex: 1;
+text-align: left;
+}
+.manifesto .about-message__content {
+flex: 2;
+text-align: left;
+margin-left: 20px;
+padding-left: 10px; 
+}
+
+/*hojin*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Samsung+Sharp+Sans&display=swap');
+
+body {
+font-family: 'Arial', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #fff;
+color: #333;
+}
+
+.section-1, .section-2, .section-3 {
+padding-left: 12%;
+padding-right: 12%;
+}
+
+.section-1 {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+margin-top: 160px;
+}
+
+.section-1 .container {
+max-width: 800px;
+padding: 20px;
+text-align: left; /* Align text to the left */
+margin-left: 120px; /* Ensure container is aligned to the left */
+}
+
+.section-1 h2 {
+font-size: 1.3em;
+margin: 0 0 20px 0;
+color: #333;
+font-weight: 400;
+padding: 15px;
+text-align: left;
+}
+
+.section-1 h1 {
+font-size: 3.75rem;
+margin: 10px 0;
+line-height: 1.2;
+font-weight: 700;
+white-space: nowrap;
+}
+
+.triple-size {
+font-size: 7.5rem;
+line-height: 1.2;
+}
+
+.section-1 .sub-heading {
+display: flex;
+justify-content: space-between;
+font-size: 1.38rem;
+margin: 20px 0 30px 0;
+font-weight: 700;
+padding: 10px;
+}
+
+.section-1 .sub-heading div {
+color: #333;
+}
+
+.section-1 .content p {
+font-size: 1.1rem;
+line-height: 1.5;
+margin: 5px 0;
+color: #333;
+font-weight: 400;
+text-align: left;
+}
+
+.section-2 {
+margin-top: 180px;
+}
+
+.section-2 .header {
+margin-bottom: 40px;
+}
+
+.section-2 .container {
+max-width: 2000px;
+margin: 0 auto;
+position: relative;
+}
+
+.section-2 .header h1 {
+font-size: 70px;
+font-family: 'Samsung Sharp Sans', sans-serif;
+font-weight: bold;
+line-height: 1.2;
+padding-left: 0px;
+}
+
+.section-2 .plus-ai {
+font-size: 70px;
+font-family: 'Arial', sans-serif;
+font-weight: bold;
+background-color: black;
+color: white;
+padding: 5px 20px;
+border-radius: 50px;
+display: inline-block;
+margin-left: 10px;
+}
+
+.section-2 .circles {
+position: absolute;
+z-index: -1;
+}
+
+.section-2 .circle {
+border-radius: 50%;
+width: 400px;
+height: 400px;
+display: inline-block;
+}
+
+.section-2 .yellow {
+background-color: #FFD700;
+position: absolute;
+right: 200px;
+top: 100px;
+z-index: 1;
+}
+
+.section-2 .blue {
+background-color: #1E90FF;
+position: absolute;
+right: 0;
+top: 150px;
+z-index: 0;
+}
+
+.section-2 .content {
+display: flex;
+justify-content: space-between;
+margin-top: 50px;
+padding: 0 50px;
+width: 1500px;
+}
+
+.section-2 .section {
+width: 22%;
+text-align: left;
+}
+
+.section-2 .section h2 {
+font-size: 24px;
+font-family: 'Arial', sans-serif;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.section-2 .section hr {
+width: 100%;
+border: 1px solid #000;
+margin-bottom: 10px;
+}
+
+.section-2 .section p {
+font-size: 18px;
+font-family: 'Samsung Sharp Sans', sans-serif;
+color: #333;
+}
+
+.section-3 {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 160px;
+}
+
+.section-3 .content {
+text-align: center;
+max-width: 800px;
+}
+
+.section-3 .contact-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+.section-3 .contact-us {
+font-size: 3.0rem;
+font-weight: 700;
+margin-bottom: 20px;
+color: #222;
+margin-top: 40px; /* Increase this value to widen the space */
+}
+
+.section-3 .contact-details {
+font-size: 1.2rem;
+color: #000;
+margin-bottom: 30px;
+line-height: 1.5;
+}
+
+.section-3 .kakao-map-button {
+font-size: 1.0rem;
+display: inline-block;
+border: 1.5px solid #222;
+background-color: #fff;
+color: #222;
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 25px;
+transition: background-color 0.3s, color 0.3s;
+text-decoration: none;
+}
+
+.section-3 .kakao-map-button:hover {
+background-color: #000;
+color: #fff;
+}
+
+nav {
+height: 70px;
+width: 100%;
+border-bottom: 1px solid #e8e4e4;
+transition: top 1.5s;
+}
+.navbar-brand {
+display: flex;
+}
+.nav-title-a {
+font-weight: 300;
+}
+.nav-title-b {
+font-weight: 600;
+}
+
+.nav-item {
+font-size: 17px;
+font-weight: 700;
+}
+.inje {
+color: #888;
+display: flex;
+}
+.inje:hover {
+color: black;
+display: flex;
+.circle {
+  background-color: #ffe100;
+}
+}
+.circle {
+background: #eee;
+border-radius: 50%;
+width: 20px;
+height: 20px;
+font-size: 11px;
+position: relative;
+left: 4px;
+top: 2px;
+padding-left: 5px;
+padding-top: 2px;
+font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+.QWE {
+  margin: 0 18px;
+}
+}
+
+.footer {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding: 20px 10px;
+background-color: #fff;
+border-top: 1px solid #e0e0e0;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 30px 0;
+}
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+width: calc(100% + 10px);
+max-width: 1200px;
+margin: 0 -5px;
+}
+.footer .left-section,
+.footer .right-section {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+.footer .social-icons {
+display: flex;
+gap: 10px;
+margin-top: 40px;
+}
+.footer .social-icons a {
+display: inline-block;
+width: 32px;
+height: 32px;
+background-color: #666;
+border-radius: 50%;
+text-align: center;
+line-height: 32px;
+color: #fff;
+text-decoration: none;
+}
+.footer .social-icons a i {
+font-size: 16px;
+}
+.footer .links {
+display: flex;
+gap: 30px;
+margin-bottom: 20px;
+align-items: center;
+}
+.footer .links a {
+color: #666;
+text-decoration: none;
+font-size: 14px;
+position: relative;
+}
+.footer .links a.bold {
+font-weight: bold;
+color: black;
+}
+.footer .links a.no-arrow::after {
+content: '';
+}
+.footer .links a.arrow::after {
+font-family: "Font Awesome 5 Free";
+content: "\f0d7";
+font-weight: 900;
+font-size: 10px;
+position: absolute;
+right: -12px;
+top: 2px;
+color: #666;
+}
+.footer .links a.input-style {
+padding: 5px 10px;
+background-color: #f5f5f5;
+border-radius: 20px;
+position: relative;
+min-width: 150px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.footer .links a.input-style::after {
+content: '+';
+position: relative;
+right: 20px;
+color: #666;
+font-size: 16px;
+}
+.footer .links a:hover {
+text-decoration: underline;
+}
+.footer .copyright {
+font-size: 16px;
+color: #0a0101;
+}
+  </style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" id="navbar">
+    <div class="container-fluid justify-content-between">
+      <ul class="navbar-nav">
+        <a class="navbar-brand" href="#">
+          <div class="nav-title-a">kakao</div>
+          <div class="nav-title-b">enterprise</div>
+        </a>
+      </ul>
+      <ul class="navbar-nav">
+        <div class="collapse navbar-collapse d-block d-flex" id="navbarNav"> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              서비스
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://kakaocloud.com/">카카오클라우드</a></li>
+              <li><a class="dropdown-item" href="https://centerflow.kakaocloud.com/">센터플로우</a></li>
+              <li><a class="dropdown-item" href="https://kakaoilaas.com/">카카오i라스</a></li>
+            </ul>
+          </li>
+          <li class="nav-item QWE">
+            <a class="nav-link" href="#">개발자</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              회사정보
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">회사소개</a></li>
+              <li><a class="dropdown-item" href="https://kakaoenterprise.com/info/news/">뉴스</a></li>
+              <li><a class="dropdown-item" href="https://splendorous-mousse-8e7d27.netlify.app">상생 프로그램</a></li>
+              <li><a class="dropdown-item" href="https://kakaoenterprise.com/info/certification/"></a></li>
+            </ul>
+          </li>
+        </div>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item nav-inje">
+          <a class="nav-link inje" href="https://careers.kakaoenterprise.com/">인재영입
+            <div class="circle">
+              <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 320deg"></i>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="article-header about-visual">
+      <div class="wrap-middle">
+        <p class="article-intro">
+          "최고의 기술 최적의 방법으로"
+          <br />
+          "기업들의 디지털 혁신을 실현합니다."
+        </p>
+        <p class="article-addition">
+          "카카오엔터프라이즈는 국내 대표 IT 플랫폼 사업자로서"
+          <br />
+          "더 스마트한 비즈니스, 더 스마트한 일상을 만들기 위해 출범했습니다."
+        </p>
+      </div>
+    </div>
+    
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel__item">
+          <div class="about-browse__thumb">
+            <img src="https://kakaoenterprise.com/wp-content/themes/kakaoenterprise/images/sub/info/about-browse-05.jpg" alt="picture 1" />
+          </div>
+          <b lang="en" class="about-browse__title">Business with Tech</b>
+        </div>
+        <div class="carousel__item">
+          <div class="about-browse__thumb">
+            <img src="https://kakaoenterprise.com/wp-content/themes/kakaoenterprise/images/sub/info/about-browse-07.jpg" alt="picture 2" />
+          </div>
+          <b lang="en" class="about-browse__title">Work with Tech</b>
+        </div>
+        <div class="carousel__item">
+          <div class="about-browse__thumb">
+            <img src="https://kakaoenterprise.com/wp-content/themes/kakaoenterprise/images/sub/info/about-browse-04.jpg" alt="picture 3" />
+          </div>
+          <b lang="en" class="about-browse__title">Future with Tech</b>
+        </div>
+        <div class="carousel__item">
+          <div class="about-browse__thumb">
+            <img src="https://kakaoenterprise.com/wp-content/themes/kakaoenterprise/images/sub/info/about-browse-08.jpg" alt="picture 4" />
+          </div>
+          <b lang="en" class="about-browse__title">Life with Tech</b>
+        </div>
+        <div class="carousel__item">
+          <div class="about-browse__thumb">
+            <img src="https://kakaoenterprise.com/wp-content/themes/kakaoenterprise/images/sub/info/about-browse-02.jpg" alt="picture 5" />
+          </div>
+          <b lang="en" class="about-browse__title">Place with Tech</b>
+        </div>
+        <div class="carousel__item">
+          <div class="about-browse__thumb">
+            <img src="https://kakaoenterprise.com/wp-content/themes/kakaoenterprise/images/sub/info/about-browse-06.jpg" alt="picture 6" />
+          </div>
+          <b lang="en" class="about-browse__title">Life with Tech</b>
+        </div>
+      </div>
+    </div>
+    
+    <div class="about-intro">
+      <div class="wrap-narrow">
+        <div class="about-message">
+          <div class="about-message__title">
+            <div class="about-intro__logo">
+              <h2 lang="en" class="about-message__title">kakaoenterprise</h2>
+            </div>
+          </div>
+          <div class="about-message__content">
+            <div class="about-message__items">
+              <p>
+                카카오엔터프라이즈는 카카오의 사내독립기업(CIC) AI Lab이 분사해
+                <br />
+                2019년 12월 공식 출범했습니다.
+                <br /><br />
+                인공지능(AI), 클라우드, 검색 등 오랜 시간 동안 축적한 카카오의 기술력과 서비스 경험을
+                <br />
+                결
+
+
+                합해 기존에 진행하던 사업을 더욱 속도감 있게 전개하고, 신규 성장 동력 확보를 위해
+                <br />
+                본격적으로 비즈니스 파트너들과 함께하는 엔터프라이즈 IT 기업을 지향합니다.
+                <br /><br />
+                급변하는 비즈니스 환경에 최적화된 디지털 혁신 솔루션을 제시하고,
+                <br />
+                기술 기업으로서 기술고도화를 위한 R&D 투자도 강화해 나가고 있습니다.
+              </p>
+
+              <button>CI 다운로드</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-message manifesto">
+          <h2 lang="en" class="about-message__title">Manifesto</h2>
+          <div class="about-message__content">
+            <p>
+              <b>
+                <span style="color:black; font-size:20px;">우리는 꿈을 현실로 만드는 여정에 함께하는 동반자이다.</span>
+                <br />
+                <span style="color:black; font-size:20px;">우리는 사람들이 자신의 꿈을 실현하는 것을 도움으로써</span>
+                <br />
+                <span style="color:black; font-size:20px;">더 나은 세상을 만드는데 기여한다.</span>
+              </b>
+              <br /><br />
+              기술과 서비스,
+              <br />
+              그리고 혁신적인 아이디어로 우리 모두의 꿈을 현실로 만듭니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 200px;">
+      <video controls width="1400px" style="border-radius: 40px;" poster="about-intro-poster.jpg">
+        <source src="./video/KakaoEnterprise_ InfusingAImp4.mp4" type="video/mp4" />
+      </video>
+    </div>
     <div class="section-1">
-        <div class="container">
-            <h2>The way we work</h2>
-            <h1 class="triple-size">Why not? If Kakao Enterprise, (________)</h1>
-            <div class="sub-heading">
-                <div>당연한 것들에 대한 도전</div>
-                <div>카카오스러운 생각에 대한 기대</div>
-            </div>
-            <div class="content">
-                <p>인공지능과 데이터, 클라우드, 검색 기술로 우리의 비즈니스와</p>
-                <p>일상에 유례없는 변화를 이끌어내는 것.</p>
-                <p>그리고 이 변화를 더 많은 사람들이, 쉽게 누릴 수 있는 세상을 만드는 것.</p>
-                <p>그것이 바로 우리가 기술을 다루는 방식이자 철학입니다.</p>
-            </div>
+      <div class="container">
+        <h2><b>The way we work</b></h2>
+        <h1 class="triple-size">Why not? If Kakao Enterprise, (________)</h1>
+        <div class="sub-heading">
+          <div>당연한 것들에 대한 도전</div>
+          <div>카카오스러운 생각에 대한 기대</div>
         </div>
-    </div>
-    <div class="section-2">
-        <div class="container">
-            <div class="header">
-                <h1>Connect. Solve. <br>Create. <span class="plus-ai">+ AI</span></h1>
-            </div>
-            <div class="circles">
-                <div class="circle yellow"></div>
-                <div class="circle blue"></div>
-            </div>
-            <div class="content">
-                <div class="section">
-                    <h2>Connect</h2>
-                    <hr>
-                    <p>우리 생활을 이어주는</p>
-                    <p>모든 것을 연결하여</p>
-                </div>
-                <div class="section">
-                    <h2>Solve</h2>
-                    <hr>
-                    <p>불편함은 줄이고</p>
-                    <p>더 가치 있는 것에 집중해</p>
-                </div>
-                <div class="section">
-                    <h2>Create</h2>
-                    <hr>
-                    <p>새로운 삶의</p>
-                    <p>방식을 창조합니다.</p>
-                </div>
-                <div class="section ai-section">
-                    <h2>+AI</h2>
-                    <hr>
-                    <p>이 모든 것을 AI와 </p>
-                    <p>함께 하겠습니다.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-3">
         <div class="content">
-            <div class="contact-container"></div>
-            <div class="contact-us">Contact Us</div>
-            <div class="contact-details">
-                경기도 성남시 분당구 판교역로 235 에이치스퀘어 N동, (주)카카오엔터프라이즈 <br>
-                cx@kakaoenterprise.com
-            </div>
-            <button class="kakao-map-button">카카오맵으로 보기</button>
-            <div style="display: flex; justify-content: center;">
-                <img src="이미지4.png" alt="Map Image" style="width: 250%; height: auto; margin-top: 20px;">
-            </div>
+          <p>인공지능과 데이터, 클라우드, 검색 기술로 우리의 비즈니스와</p>
+          <p>일상에 유례없는 변화를 이끌어내는 것.</p>
+          <p>그리고 이 변화를 더 많은 사람들이, 쉽게 누릴 수 있는 세상을 만드는 것.</p>
+          <p>그것이 바로 우리가 기술을 다루는 방식이자 철학입니다.</p>
         </div>
+      </div>
     </div>
-    <div class="footer">
-        <div class="footer-content">
-            <div class="left-section">
-                <div class="copyright">
-                    © Kakao Enterprise Corp.
-                </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-blogger-b"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-telegram"></i></a>
-                </div>
-            </div>
-            <div class="right-section">
-                <div class="links">
-                    <a href="#" class="arrow">회사소개</a>
-                    <a href="#" class="bold no-arrow">개인정보처리방침</a>
-                    <a href="#" class="no-arrow">사이버윤리실</a>
-                    <a href="#" class="arrow">공지사항</a>
-                    <a href="#" class="no-arrow">고객지원</a>
-                    <a href="#" class="input-style no-arrow">관련사이트</a>
-                </div>
-            </div>
+
+    <div class="section-2">
+      <div class="container">
+        <div class="header">
+          <h1>Connect. Solve. <br>Create. <span class="plus-ai">+ AI</span></h1>
         </div>
+        <div class="content">
+          <div class="section">
+            <h2>Connect</h2>
+            <hr />
+            <p>우리 생활을 이어주는</p>
+            <p>모든 것을 연결하여</p>
+          </div>
+          <div class="section">
+            <h2>Solve</h2>
+            <hr />
+            <p>불편함은 줄이고</p>
+            <p>더 가치 있는 것에 집중해</p>
+          </div>
+          <div class="section">
+            <h2>Create</h2>
+            <hr />
+            <p>새로운 삶의</p>
+            <p>방식을 창조합니다.</p>
+          </div>
+          <div class="section ai-section">
+            <h2>+AI</h2>
+            <hr />
+            <p>이 모든 것을 AI와</p>
+            <p>함께 하겠습니다.</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="section-3">
+      <div class="content">
+        <div class="contact-container"></div>
+        <div class="contact-us">Contact Us</div>
+        <div class="contact-details">
+          경기도 성남시 분당구 판교역로 235 에이치스퀘어 N동, (주)카카오엔터프라이즈
+          <br />
+          cx@kakaoenterprise.com
+        </div>
+        <button class="kakao-map-button">카카오맵으로 보기</button>
+        <div style="display: flex; justify-content: center;">
+          <img src="이미지4.png" alt="Map Image" style="width: 250%; height: auto; margin-top: 20px;" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    <div class="footer-content">
+      <div class="left-section">
+        <div class="copyright">© Kakao Enterprise Corp.</div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-blogger-b"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="links">
+          <a href="#" class="arrow">회사소개</a>
+          <a href="#" class="bold no-arrow">개인정보처리방침</a>
+          <a href="#" class="no-arrow">사이버윤리실</a>
+          <a href="#" class="arrow">공지사항</a>
+          <a href="#" class="no-arrow">고객지원</a>
+          <a href="#" class="input-style no-arrow">관련사이트</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/895ceaea3b.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
 </html>
+               
